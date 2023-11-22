@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind Test</title>
+    <script>
+        tailwind.config={
+            theme: {
+                screens: {
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                },
+
+                extend:{
+                    screens: {
+                    'xs': '320px',
+                    // => @media (min-width: 640px) { ... }
+                    },
+                },
+            }
+        }
+    </script>
+</head>
+<body>
+    <section class="duration-200 hover:border-sky-400 border-8 rounded-3xl border-red-900 m-4 p-2 me-2 overflow-hidden grid grid-cols-2 xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+        <div class=" col-span-2 xs:col-span-2 md:col-span-2 lg:col-span-2 xl:col-start-1">
+            <h1 class="text-3xl font-bold xs:text-purple-700 text-center ms-2 mb-4 text-blue-500">Hello Training Session</h1>
+        </div>
+        <div class="text-center col-span-2 lg:w-64 xl:w-64 2xl:w-64 xs:col-span-2 xl-col-span-1 xl:col-start-6 xl:col-end-6 ">
+            <h2 class="text-2xl text-blue-500 font-bold text-center me-2 mb-2 lg:text-green-500">This is second div</h2>
+        </div>
+        <div class="xl:col-start-2 md:col-start-1 col-span-2 md:col-span-4 flex justify-center">
+            <img class="w-32 xs:w-32 md:w-48 me-4 shrink-0 rounded-3xl border-2 border-silver-600" src="/WhatsApp Image 2022-10-22 at 5.37.09 PM.jpeg" alt="myImage">
+            <h3 class="text-yellow-600 text-lg md:w-3/5 md:text-lg xs:text-sm xs:mt-4 font-bold w-96">The image shown here is Suman Regmi from Itahari Nepal. He is currently learning Tailwind CSS.</h3>
+        </div>
+        <div></div>
+    </section>
+</body>
+</html>
